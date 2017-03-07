@@ -1,3 +1,6 @@
 *.d
 *.o
 .DS_Store
+simple_test
+filter_test
+tree_insert
