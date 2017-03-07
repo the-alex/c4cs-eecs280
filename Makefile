@@ -10,9 +10,11 @@ test: filter_test simple_test tree_insert_test p2-tests
 
 simple_test: simple_test.cpp p2.cpp Recursive_list.cpp Binary_tree.cpp \
 	      recursive.cpp test_helpers.cpp
-	g++ -Wall -Werror -pedantic -O2 \
+	g++ -Wall -Werror -MMD -pedantic -O2 \
 	      simple_test.cpp p2.cpp Recursive_list.cpp Binary_tree.cpp \
 	      recursive.cpp test_helpers.cpp -o simple_test
+
+-include simple_test.d
 
 filter_test: filter_test.cpp p2.cpp Recursive_list.cpp Binary_tree.cpp \
 	      recursive.cpp test_helpers.cpp
